@@ -1,0 +1,199 @@
+/* BEGIN: Left menu Avatar */
+.user-panel .image:hover .c-edit-user{
+    display: block;
+    z-index: 9999;
+}
+
+.c-edit-user{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /*height: 100%;*/
+    padding: 10px 0;
+    vertical-align: middle;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .6) 100%);
+    text-align: left;
+    display: none;
+}
+
+.c-edit-user a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFF!important;
+}
+
+/* BEGIN: Left menu sub items */
+.treeview-menu>li {
+    padding-left: 10px;
+}
+/* END: Left menu sub items */
+
+/* BEGIN: Datatable */
+#action-checkbox{
+	display: none;
+}
+
+.content-header>.breadcrumb {
+    float: left;
+    padding: 0px 5px;
+    position: unset;
+    line-height: 34px;
+}
+
+.box.box-info{
+	border-color: #d2d6de;
+}
+
+#dataTable_wrapper{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+form.form-horizontal {
+    margin: 15px 0px;
+}
+
+.action-button{
+	float: right;
+}
+
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+    border: 1px solid #d4d4d4;
+}
+
+.table>caption+thead>tr:first-child>td, .table>caption+thead>tr:first-child>th, .table>colgroup+thead>tr:first-child>td, .table>colgroup+thead>tr:first-child>th, .table>thead:first-child>tr:first-child>td, .table>thead:first-child>tr:first-child>th {
+     border-top: 1px solid #d4d4d4; 
+}
+
+table.table-bordered.dataTable th, table.table-bordered.dataTable td {
+    border-left-width: 1px;
+}
+
+table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable td:last-child, table.table-bordered.dataTable td:last-child {
+    border-right-width: 1px;
+}
+
+table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
+    border-bottom-width: 1px;
+}
+
+table#dataTable {
+    border-collapse: collapse!important;
+}
+
+td #avatar-image{
+	max-width:40px;
+}
+
+td.icon-gender{
+	font-size: 20px;
+	text-align: center;
+}
+
+.dataTable th label{
+    margin-bottom: 0px;
+}
+/* END: Datatable */
+
+/*BEGIN: Loading indicator*/
+.sk-double-bounce {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 40px auto; }
+  .sk-double-bounce .sk-child {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-doubleBounce 2s infinite ease-in-out;
+            animation: sk-doubleBounce 2s infinite ease-in-out; }
+  .sk-double-bounce .sk-double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s; }
+
+@-webkit-keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes sk-doubleBounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.c-loading-wrapper{
+    background-color: #fff;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.5s ease;
+    opacity: .7;
+}
+
+.loaded{
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+/*END: Loading indicator*/
+
+/* BEGIN: Breadcrumb */
+.content-header>.breadcrumb>li.active>.fa, .content-header>.breadcrumb>li.active>.glyphicon, .content-header>.breadcrumb>li.active>.ion {
+    margin-right: 5px;
+}
+/* END: Breadcrumb */
+
+div#tb-limit{
+    margin-right: 10px;
+}
+
+div#tb-length {
+    line-height: 34px;
+}
+
+/* BEGIN: Box Images; */
+ul.box-img {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.box-img li {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    margin-right: 5px;
+}
+
+.box-img li:hover .a-delete {
+    display: block;
+}
+
+.box-img li .a-delete {
+    background-color: #ccc;
+    padding: 0 5px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+}
+
+.box-img li .a-delete i {
+    color: #000;
+}
+/* END: Box Images; */

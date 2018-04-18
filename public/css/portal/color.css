@@ -1,0 +1,80 @@
+/* BEGIN: Header Section */
+header{
+	background: #e1ce7a;
+}
+
+p.line svg{
+	color: #ff0000;
+}
+
+header ul.top-nav li a{
+	color:#e63946;
+}
+
+div#nav-bar{
+	background-color: #e63946;
+}
+
+div#nav-bar ul.top-nav li a{
+	color:#fce9d0;
+}
+/* END: Header Section */
+
+/* BEGIN: Footer Section; */
+div#footer-nav-bar{
+	background-color: #e1ce7a;
+}
+
+div#footer-nav-bar ul.top-nav li a{
+	color:#e63946;
+}
+
+footer .org-contact {
+	color: #af9164;
+}
+
+footer .org-info {
+	color: #af9164;
+}
+/* END: Footer Section; */
+
+/* BEGIN: Search Section; */
+
+.left-menu .title {
+    background-color: #af9164;
+    color: #fff;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #f09e1e;
+}
+
+.left-menu li a {
+    color: #777;
+}
+/* END: Search Section; */
+
+/* BEGIN: Main content section; */
+.tt .line {
+    background-color: #af9164;
+    color: #fff;
+}
+/* END: Main content section; */
+
+/* BEGIN: Custom Unite Gallery CSS; */
+.ug-gallery-wrapper .ug-strip-panel{
+	background-color: #fff;
+}
+/* END: Custom Unite Gallery CSS; */
+
+div#nav-bar ul.top-nav li ul.sub-menu li{
+    background-color: #e6333f;
+}
+
+div#nav-bar ul.top-nav li ul.sub-menu svg{
+    color: #fff;
+}
+
+div#nav-bar ul.top-nav li ul.sub-menu li ul.sub-menu-level-2 li{
+    background-color: #e6333f;
+}

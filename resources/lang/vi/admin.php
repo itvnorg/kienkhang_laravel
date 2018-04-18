@@ -1,0 +1,113 @@
+<?php 
+
+return [
+	'actions'	=>	'Hành động',
+	'active'	=> 'Hoạt động',
+	'acreage'	=>	'Diện tích',
+	'address'	=>	'Địa chỉ',
+	'account'	=>	'Tài khoản',
+	'accounts'	=>	'Tài khoản',
+
+	'cancle'	=>	'Hủy',
+	'category'	=> 'Danh mục',
+	'city'	=> 'Thành phố',
+	'configuration' => 'Cài đặt',
+	'content'	=> 'Nội dung',
+
+	'delete'	=>	'Xóa',
+	'delete?'	=>	'Bạn có chắc muốn xóa dòng này ?',
+	'deletes?'	=>	'Bạn có chắc muốn xóa các dòng này ?',
+	'delete_yes'	=>	'Đúng, Xóa đi',
+	'deleted'	=> 'Đã xóa',
+	'description'	=>	'Chú thích',
+	'direction'	=> 'Hướng',
+	'directions'	=> 'Hướng',
+	'district' => 'Quận/Huyện',
+	'districts' => 'Quận/Huyện',
+
+	'edit_profile' => 'Thay đổi thông tin',
+
+	'image'	=>	'Hình',
+	'images'	=> 'Hình',
+	'inactive'	=>	'Không hoạt động',
+	'index'		=>	'Thứ tự',
+
+	'file' => 'Tập tin',
+	'files' => 'Tập tin',
+	'file_category' => 'Danh mục tập tin',
+	'file_categories' => 'Danh mục tập tin',
+	'file_name'	=>	'Tên tập tin',
+	'file_type'	=>	'Loại tập tin',
+	'file_path'	=>	'Đường dẫn tập tin',
+
+	'home' => 'Trang chủ',
+	'hot'	=>	'Nóng',
+
+	'level'	=>	'Cấp',
+	'locations' => 'Địa điểm',
+	'log_out'	=>	'Đăng xuất',
+
+	'msgSuccessStore' => 'Thêm mới :resource thành công.',
+	'msgErrModelNotExists' => 'Xin lỗi, :resource này không tồn tại.',
+	'msgSuccessUpdate' => 'Cập nhật :resource thành công.',
+	'msgSuccessDestroy' => 'Xóa :resource với id = :id thành công.',
+
+	'name'	=>	'Tên',
+	'news' => 'Tin tức',
+	'news_category' => 'Danh mục tin',
+	'news_categories' => 'Danh mục tin',
+	'next'	=>	'Tới',
+	'no'	=>	'Không',
+	'no_choose_row'	=>	'Bạn chưa chọn dòng nào',
+
+	'obj_cat' => 'Danh mục :obj',
+	'obj_edit'	=>	'Sửa :obj',
+	'obj_input'	=> 'Nhập vào :obj',
+	'obj_new' => ':obj mới',
+	'obj_photo'	=>	'Hình :obj',
+	'others' => 'Khác',
+	'other'	=> 'Khác',
+	'opps'	=>	'Ôiiiii',
+	'optional'	=>	'(Không bắt buộc)',
+
+	'page'	=> 'Trang',
+	'pages'	=> 'Trang',
+	'parent_id'	=>	'ID Cấp Cha',
+	'parent_cat'	=> 'Danh mục cha',
+	'prev'	=>	'Lui',
+	'preview'	=>	'Xem trước',
+	'price'	=>	'Giá',
+	'product'	=> 'Tin rao',
+	'products' => 'Tin rao',
+	'product_category' => 'Danh mục tin rao',
+	'product_categories' => 'Danh mục tin rao',
+	'province' => 'Tỉnh/Thành phố',
+	'provinces' => 'Tỉnh/Thành phố',
+
+	'rooms'	=>	'Số phòng',
+	'role'	=>	'Vai trò',
+	'roles'	=>	'Vai trò',
+
+	'save'	=> 'Lưu',
+	'search'	=>	'Tìm kiếm ...',
+	'setting' => 'cài đặt',
+	'settings' => 'cài đặt',
+	'status'	=> 'Trạng thái',
+	'system_error'	=> 'Lỗi hệ thống',
+	'system_settings' => 'Cài đặt hệ thống',
+	'system_setting' => 'Cài đặt hệ thống',
+	'system' => 'Hệ thống',
+
+	'title' => 'Tên',
+	'type'	=>	'Loại',
+
+	'update' => 'Cập nhật :name',
+	'user'	=>	'Người dùng',
+	'users'	=>	'Người dùng',
+
+	'views' => 'Lượt xem',
+
+	'ward'	=>	'Phường',
+	'wards' => 'Phường',
+	'warning'	=>	'Cảnh báo',
+];

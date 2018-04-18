@@ -1,0 +1,78 @@
+.alert{
+	margin: 10px 10px 10px 10px;
+}
+
+.alert.alert-warning {
+	color: #8a6d3b!important;
+	background-color: #fcf8e3!important;
+	border-color: #faebcc;
+}
+
+.alert h4{
+	font-size: 16px!important;
+    margin: 0;
+}
+
+.alert-success {
+    color: #3c763d!important;
+    background-color: #dff0d8!important;
+    border-color: #d6e9c6!important;
+}
+
+.alert-danger {
+    color: #a94442!important;
+    background-color: #f2dede!important;
+    border-color: #ebccd1!important;
+}
+
+/*
+    Sweet alert
+*/
+.swal2-icon{
+    margin: 10px auto 20px !important;
+}
+
+.swal2-title{
+    font-size: 25px !important;
+}
+.swal2-buttonswrapper{
+    margin-top: 0px !important;
+}
+    
+.swal2-buttonswrapper button {
+    margin: 20px 5px 0 !important;
+    min-width: 70px !important;
+    font-size: 14px !important;
+}
+
+/*
+    Form Required
+*/
+.form-group.required>label.control-label:after {
+    content: "*";
+    color: red;
+}
+
+
+/*
+    Form Section Separate
+*/
+div.hr {
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+    margin: 0px 0px 15px;
+}
+div.hr .text {
+    display: inline-block;
+    position: relative;
+    top: 9px;
+    background-color: white;
+    margin: 0px -6px;
+    padding: 0px 6px;
+    font-weight: bold;
+    color:dimgray;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+    color: rgb(51, 51, 51);
+}
