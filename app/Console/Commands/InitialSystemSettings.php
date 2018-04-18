@@ -39,7 +39,7 @@ class InitialSystemSettings extends Command
     public function handle()
     {
         $settings_data = [
-            ['id' => 1, 'key' => 'site_name', 'data_type' => 'string', 'value' => 'VN Tech', 'is_hidden' => false],
+            ['id' => 1, 'key' => 'site_name', 'data_type' => 'string', 'value' => 'Bất Động Sản Kiến Khang', 'is_hidden' => false],
             ['id' => 2, 'key' => 'site_name_sub', 'data_type' => 'string', 'value' => 'VN Tech', 'is_hidden' => false],                        
             ['id' => 3, 'key' => 'site_name_short', 'data_type' => 'string', 'value' => 'VN Tech', 'is_hidden' => false],
             ['id' => 4, 'key' => 'site_name_mobile', 'data_type' => 'string', 'value' => 'VNT', 'is_hidden' => false],
@@ -51,18 +51,18 @@ class InitialSystemSettings extends Command
             ['id' => 14, 'key' => 'site_favicon', 'data_type' => 'string', 'value' => 'favicon.ico', 'is_hidden' => false],
 
             ['id' => 201, 'key' => 'company_name', 'data_type' => 'string', 'value' => 'VN Tech', 'is_hidden' => false],
-            ['id' => 202, 'key' => 'company_name_full', 'data_type' => 'string', 'value' => '', 'is_hidden' => false],
+            ['id' => 202, 'key' => 'company_name_full', 'data_type' => 'string', 'value' => 'Công Ty Kiến Trúc Xây Dựng Bất Động Sản Kiến Khang', 'is_hidden' => false],
             ['id' => 203, 'key' => 'company_name_short', 'data_type' => 'string', 'value' => '', 'is_hidden' => false],
             
-            ['id' => 211, 'key' => 'company_email', 'data_type' => 'string', 'value' => '', 'is_hidden' => false],
+            ['id' => 211, 'key' => 'company_email', 'data_type' => 'string', 'value' => 'truongtraneuro@gmail.com', 'is_hidden' => false],
             ['id' => 212, 'key' => 'company_email_2', 'data_type' => 'string', 'value' => '', 'is_hidden' => true],
 
-            ['id' => 221, 'key' => 'company_phone', 'data_type' => 'string', 'value' => '', 'is_hidden' => false],
+            ['id' => 221, 'key' => 'company_phone', 'data_type' => 'string', 'value' => '0961868939', 'is_hidden' => false],
             ['id' => 222, 'key' => 'company_phone_2', 'data_type' => 'string', 'value' => '', 'is_hidden' => true],
 
-            ['id' => 223, 'key' => 'company_hot_line', 'data_type' => 'string', 'value' => '', 'is_hidden' => false],
+            ['id' => 223, 'key' => 'company_hot_line', 'data_type' => 'string', 'value' => '0961868939', 'is_hidden' => false],
 
-            ['id' => 231, 'key' => 'company_address', 'data_type' => 'string', 'value' => '', 'is_hidden' => false],
+            ['id' => 231, 'key' => 'company_address', 'data_type' => 'string', 'value' => '19 Nguyễn Đình Chiểu, Vĩnh Thọ, Thành phố Nha Trang, Khánh Hòa 650000, Việt Nam', 'is_hidden' => false],
             ['id' => 232, 'key' => 'company_address_2', 'data_type' => 'string', 'value' => '', 'is_hidden' => true],
 
             ['id' => 233, 'key' => 'lat', 'data_type' => 'string', 'value' => '', 'is_hidden' => true],
@@ -80,9 +80,9 @@ class InitialSystemSettings extends Command
             ['id' => 310, 'key' => 'social_wechat', 'data_type' => 'string', 'value' => '', 'is_hidden' => true],
             ['id' => 311, 'key' => 'social_whatapp', 'data_type' => 'string', 'value' => '', 'is_hidden' => true],
 
-            ['id' => 401, 'key' => 'admin_name', 'data_type' => 'string', 'value' => '', 'is_hidden' =>false],
-            ['id' => 402, 'key' => 'admin_email', 'data_type' => 'string', 'value' => '', 'is_hidden' =>false],
-            ['id' => 403, 'key' => 'admin_phone', 'data_type' => 'string', 'value' => '', 'is_hidden' =>false],
+            ['id' => 401, 'key' => 'admin_name', 'data_type' => 'string', 'value' => 'Đặng Trường Trận', 'is_hidden' =>false],
+            ['id' => 402, 'key' => 'admin_email', 'data_type' => 'string', 'value' => 'truongtraneuro@gmail.com', 'is_hidden' =>false],
+            ['id' => 403, 'key' => 'admin_phone', 'data_type' => 'string', 'value' => '0961868939', 'is_hidden' =>false],
             
             ['id' => 601, 'key' => 'account_mailer', 'data_type' => 'string', 'value' => 'vntech.sendmail@gmail.com', 'is_hidden' => false],
             ['id' => 602, 'key' => 'password_mailer', 'data_type' => 'string', 'value' => 'vntech@123', 'is_hidden' => false],

@@ -39,7 +39,7 @@ class InitialAdminAccount extends Command
     public function handle()
     {
         $email = env("ADMIN_ACCOUNT_EMAIL", "admin@admin.com");  
-        $password = env("ADMIN_ACCOUNT_PASSWORD", "123456");
+        $password = env("ADMIN_ACCOUNT_PASSWORD", "admin@123abc.");
         $first_name = env("ADMIN_ACCOUNT_FIRST_NAME", "Admin");
         $last_name = env("ADMIN_ACCOUNT_LAST_NAME", "VN Tech");
         #--> Create User
