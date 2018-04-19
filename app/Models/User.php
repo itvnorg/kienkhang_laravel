@@ -40,14 +40,14 @@ class User extends \Cartalyst\Sentinel\Users\EloquentUser
 
     public static $rulesUpdateUser = array(
         'email' => 'required',
-        'password' => 'required|confirmed',
+        'password' => 'confirmed',
         'new_password' => 'confirmed',
         'role' => 'required'
     ); 
 
     public static $rulesUpdateProfile = array(
         'email' => 'required',
-        'password' => 'confirmed',
+        'password' => 'required|confirmed',
         'new_password' => 'confirmed'
     ); 
 
