@@ -193,31 +193,18 @@
       </div>
       <!-- END: Phone -->
 
-      <!-- BEGIN: Address 1 -->
+      <!-- BEGIN: Address -->
       <div class="form-group">
-        {{Form::label('address_1', 'Address 1', ['class' => 'control-label col-sm-2'])}}
+        {{Form::label('address', 'Address', ['class' => 'control-label col-sm-2'])}}
           <div class="col-sm-9">
-            {{Form::text('address_1', NULL, [
+            {{Form::text('address', NULL, [
          'class' => 'form-control',
          'placeholder' => 'Address 1'
          ])
         }}
           </div>
       </div>
-      <!-- END: Address 1 -->
-
-      <!-- BEGIN: Address 2 -->
-      <div class="form-group">
-        {{Form::label('address_2', 'Address 2', ['class' => 'control-label col-sm-2'])}}
-          <div class="col-sm-9">
-            {{Form::text('address_2', NULL, [
-         'class' => 'form-control',
-         'placeholder' => 'Address 2'
-         ])
-        }}
-          </div>
-      </div>
-      <!-- END: Address 2 -->
+      <!-- END: Address -->
 
       
 
