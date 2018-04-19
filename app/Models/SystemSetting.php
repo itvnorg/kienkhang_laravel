@@ -44,7 +44,7 @@ class SystemSetting extends Model
    	}
 
     public static function getSettings(){
-        $settings = SystemSetting::where('is_hidden','!=',1)->get();
+        $settings = SystemSetting::get();
         return $settings;
     }
 }
