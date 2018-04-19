@@ -42,9 +42,43 @@ class SystemSetting extends Model
         }
    		return $settings;
    	}
+    
+    public static function getAllSettingsKeyValue(){
+        $settings = [];
+        $model = SystemSetting::get();
+
+        foreach($model as $settingItem)
+        {
+            $key = $settingItem->key;
+            $dataType = $settingItem->data_type;
+            $value = $settingItem->value;
+            switch (strtolower($dataType)) {
+                case 'integer':
+                    $value = (int)$value;
+                    break;
+                case 'numeric':
+                    $value = (double)$value;
+                    break;
+                case 'string':
+                
+                    break;
+                case 'html':
+                
+                    break;
+                case 'json':
+                    $value = json_decode($value);
+                    break;
+                default:
+                    
+                    break;
+            }
+            $settings[$key] = $value;
+        }
+        return $settings;
+    }
 
     public static function getSettings(){
-        $settings = SystemSetting::get();
+        $settings = SystemSetting::where('is_hidden','!=',1)->get();
         return $settings;
     }
 }

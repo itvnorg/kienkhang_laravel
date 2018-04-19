@@ -15,7 +15,7 @@ class Controller extends BaseController
     public $settings;
 
 	public function __construct() {		
-		$this->settings = SystemSetting::getSettingsKeyValue();
+		$this->settings = SystemSetting::getAllSettingsKeyValue();
 		$this->data['settings'] = $this->settings;
 
         $config = array(
