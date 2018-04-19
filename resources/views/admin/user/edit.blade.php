@@ -199,7 +199,7 @@
           <div class="col-sm-9">
             {{Form::text('address', NULL, [
          'class' => 'form-control',
-         'placeholder' => 'Address 1'
+         'placeholder' => 'Address'
          ])
         }}
           </div>

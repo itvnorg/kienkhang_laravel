@@ -47,7 +47,7 @@ class User extends \Cartalyst\Sentinel\Users\EloquentUser
 
     public static $rulesUpdateProfile = array(
         'email' => 'required',
-        'password' => 'required|confirmed',
+        'password' => 'confirmed',
         'new_password' => 'confirmed'
     ); 
 
@@ -58,7 +58,8 @@ class User extends \Cartalyst\Sentinel\Users\EloquentUser
     public static $rulesUpdatePassword = array(
         'id' => 'required',
         'code' => 'required',
-        'password' => 'required|confirmed'
+        'password' => 'required|confirmed',
+        'password_confirmation' =>  'confirmed'
     );  
 
     public static function updateRolesOfUser($user_id, $input_roles){
