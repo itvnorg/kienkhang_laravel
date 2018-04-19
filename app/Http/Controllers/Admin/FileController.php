@@ -123,7 +123,7 @@ class FileController extends BaseController
             // Upload and copy file to file location
             $fileName = $file->getClientOriginalName();
             
-            File::delete(public_path() . $path_file, $fileName); // Delete old file
+            \File::delete(public_path() . $path_file, $fileName); // Delete old file
 
             $file->move($path_file, $fileName);
 
