@@ -39,7 +39,8 @@ class InitialAuthorization extends Command
     public function handle()
     {
         $roles_data = [
-            ['id' => 1, 'name' => 'admin', 'slug' => 'admin']
+            ['id' => 1, 'name' => 'admin', 'slug' => 'admin'],
+            ['id' => 2, 'name' => 'user', 'slug' => 'user']
         ];
         foreach ($roles_data as $role_item) {
             $role = Sentinel::getRoleRepository()->createModel()->create([

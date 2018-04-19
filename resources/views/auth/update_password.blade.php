@@ -3,12 +3,12 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<title>{{$settings['site_name']}} - {{$titlePage}}</title>
 
 	<!-- Google Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
 	<!-- Turn off animate -->
-	<!-- <link rel="stylesheet" href="{{asset('css/staff/animate.css')}}"> -->
 	<link rel="stylesheet" href="{{asset('css/auth/style.css')}}">
 	<link rel="stylesheet" href="{{asset('css/auth/custom.css')}}">
 	<script src="{{asset('bower_components/jquery/dist/jquery.min.js')}}"></script>
@@ -17,30 +17,27 @@
 
 <body>
 	<div class="container">
-		<form id="i-login-form" action="{{route('login.submit')}}" method="POST">
+		<form id="i-login-form" action="{{route('password.update.submit')}}" method="POST">
+			<input type="hidden" name="id" id="id" value="{{ $id }}" />
+			<input type="hidden" name="code" id="code" value="{{ $code }}" />
 			<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 			<div class="top">
-				<h1 id="title" class="hidden"><span id="logo">{{$settings['site_name_short']}}<span></span></span></h1>
+				<h1 id="title" class="hidden"><span id="logo">Working <span>Management</span></span></h1>
 			</div>
 			<div class="login-box animated fadeInUp">
 				<div class="box-header">
-					<h2>Log In</h2>
+					<h2>{{$titlePage}}</h2>
 				</div>
-				@if(Session::has('error_invalid'))
-					<label class="error" style="margin-top: 0px;">{{Session::get('error_invalid')}}</label>
-				@endif
-				<label for="username">Email</label>
-				<br/>
-				<input type="text" id="email" name="email" required>
-				<br/>
 				<label for="password">Password</label>
 				<br/>
 				<input type="password" id="password" name="password" required>
 				<br/>
-				<button type="submit">Sign In</button>
+				<label for="password_confirmation">Password Confirm</label>
 				<br/>
-				<a href="{{route('password.forgot.view')}}"><p class="small">Forgot your password ?</p></a>
-				<a href="{{route('register.view')}}"><p class="small">You haven't account ?</p></a>
+				<input type="password" id="password_confirmation" name="password_confirmation" required>
+				<br/>
+				<button type="submit">Update Password</button>
+				<br/>
 			</div>
 		</form>
 	</div>
@@ -53,11 +50,11 @@
 		// $('#logo').addClass('animated fadeInDown');
 		$("input:text:visible:first").focus();
 	});
-	$('#username').focus(function() {
-		$('label[for="username"]').addClass('selected');
+	$('#password_confirmation').focus(function() {
+		$('label[for="password_confirmation"]').addClass('selected');
 	});
-	$('#username').blur(function() {
-		$('label[for="username"]').removeClass('selected');
+	$('#password_confirmation').blur(function() {
+		$('label[for="password_confirmation"]').removeClass('selected');
 	});
 	$('#password').focus(function() {
 		$('label[for="password"]').addClass('selected');
@@ -72,10 +69,8 @@
 					required: true,
 					minlength: 5
 				},
-				
-				email: {
-					required: true,
-					email: true
+				password_confirmation: {
+					equalTo: "#password"
 				}
 			},
 			messages: {
@@ -83,7 +78,9 @@
 					required: "Please provide a password",
 					minlength: "Your password must be at least 5 characters long"
 				},
-				email: "Please enter a valid email address",
+				password_confirmation: {
+					equalTo: "Password confirmation must be same with password"
+				}
 			}
 		});
 </script>

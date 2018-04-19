@@ -17,30 +17,66 @@
 
 <body>
 	<div class="container">
-		<form id="i-login-form" action="{{route('login.submit')}}" method="POST">
+		<form id="i-login-form" action="{{route('register.submit')}}" method="POST">
 			<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 			<div class="top">
 				<h1 id="title" class="hidden"><span id="logo">{{$settings['site_name_short']}}<span></span></span></h1>
 			</div>
 			<div class="login-box animated fadeInUp">
 				<div class="box-header">
-					<h2>Log In</h2>
+					<h2>{{$titlePage}}</h2>
 				</div>
 				@if(Session::has('error_invalid'))
 					<label class="error" style="margin-top: 0px;">{{Session::get('error_invalid')}}</label>
 				@endif
-				<label for="username">Email</label>
+
+		  		<!-- BEGIN: Email -->
+		    	<div class="form-group required">
+		    		{{Form::label('email', 'Email', ['class' => 'control-label col-sm-2'])}}
+		      		<div class="col-sm-9">
+		      			{{Form::email('email', NULL, [
+					   'class' => 'form-control',
+					   'placeholder' => 'Email'
+					   ])
+				   	}}
+		      		</div>
+		    	</div>
+		  		<!-- END: Email -->
+
+		      <!-- BEGIN: Password -->
+		    	<div class="form-group">
+		    		{{Form::label('password', 'Password', ['class' => 'control-label col-sm-2'])}}
+		      		<div class="col-sm-9">
+		            <div class="input-group">
+		        			{{Form::password('password', [
+		      			   'class' => 'form-control',
+		      			   'placeholder' => 'Passwords'
+		      			   ])
+		      		   	}}
+		            </div>
+		      		</div>
+		    	</div>
+		      <!-- END: Password -->
+
+		      <!-- BEGIN: Confirm Password -->
+		      <div class="form-group">
+		        {{Form::label('confirm_password', 'Confirm Password', ['class' => 'control-label col-sm-2'])}}
+		          <div class="col-sm-9">
+		            <div class="input-group">
+		              {{Form::password('password_confirmation', [
+		               'class' => 'form-control',
+		               'placeholder' => 'Confirm Password',
+		                'id' => 'password_confirmation'
+		               ])
+		              }}
+		            </div>
+		          </div>
+		      </div>
+		      <!-- END: Confirm Password -->
+		      
+				<button type="submit">{{$titlePage}}</button>
 				<br/>
-				<input type="text" id="email" name="email" required>
-				<br/>
-				<label for="password">Password</label>
-				<br/>
-				<input type="password" id="password" name="password" required>
-				<br/>
-				<button type="submit">Sign In</button>
-				<br/>
-				<a href="{{route('password.forgot.view')}}"><p class="small">Forgot your password ?</p></a>
-				<a href="{{route('register.view')}}"><p class="small">You haven't account ?</p></a>
+				<a href="{{route('login.view')}}"><p class="small">You had account already ?</p></a>
 			</div>
 		</form>
 	</div>

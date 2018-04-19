@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('user.master')
 
 @section('css')
 @endsection
@@ -67,9 +67,9 @@
 		}
 	});
 
-	var urlIndex = '{{route("admin.products.index")}}';
-	var urlCreate ='{{route("admin.products.create")}}';
-	var urlDeleteMulti = '{{route("admin.products.delete")}}';
+	var urlIndex = '{{route("user.products.index")}}';
+	var urlCreate ='{{route("user.products.create")}}';
+	var urlDeleteMulti = '{{route("user.products.delete")}}';
 	var idRows = [];
 	var searchForm = $('#tb-search');
 	var currentPage = 1;
@@ -77,7 +77,7 @@
 	var limitPerPage = $('.sl-limit').val();
 
 	editItem = function(id){
-		document.location = '/admin/products/' + id + '/edit';
+		document.location = '/user/products/' + id + '/edit';
 	}
 
 	deleteItem = function(id){
@@ -227,7 +227,7 @@
 
 		function goDelete(id){
 			$.ajax({
-				url: '/admin/products/' + id,
+				url: '/user/products/' + id,
 				method: 'DELETE',
 				success: function(result) {
 					data = $.parseJSON(result);

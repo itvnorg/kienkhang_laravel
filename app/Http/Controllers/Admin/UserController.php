@@ -100,8 +100,7 @@ class UserController extends BaseController
             'last_name' => $input['last_name'],
             'gender' => $input['gender'],
             'phone' => $input['phone'],
-            'address_1' => $input['address_1'],
-            'address_2' => $input['address_2'],
+            'address' => $input['address'],
             'skype' => $input['skype'],
             'password' => $input['password']
         ];
@@ -204,8 +203,7 @@ class UserController extends BaseController
             'last_name' => $input['last_name'],
             'gender' => $input['gender'],
             'phone' => $input['phone'],
-            'address_1' => $input['address_1'],
-            'address_2' => $input['address_2'],
+            'address' => $input['address'],
             'skype' => $input['skype']
         ];
 
@@ -338,8 +336,7 @@ class UserController extends BaseController
             'last_name' => $input['last_name'],
             'gender' => $input['gender'],
             'phone' => $input['phone'],
-            'address_1' => $input['address_1'],
-            'address_2' => $input['address_2'],
+            'address' => $input['address'],
             'skype' => $input['skype']
         ];
 

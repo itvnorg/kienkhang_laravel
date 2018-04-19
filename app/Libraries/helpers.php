@@ -36,6 +36,16 @@ function GetViewAdminResource($resource, $action = 'index')
     return 'admin.'.$resource.'.'.$action;
 }
 
+function GetRouteResource($resource, $role, $action = 'index')
+{
+    return  $role.'.'.$resource.'.'.$action;
+}
+
+function GetViewResource($resource, $role, $action = 'index')
+{
+    return  $role.'.'.$resource.'.'.$action;
+}
+
 function BuildOptionList($obj){
     $list = [];
     foreach ($obj as $key => $value) {

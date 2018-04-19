@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends \Cartalyst\Sentinel\Users\EloquentUser
 {
-    use SoftDeletes;
+    // use SoftDeletes;
 
     const MALE = 1;    
     const FEMALE = 0;
@@ -25,6 +25,12 @@ class User extends \Cartalyst\Sentinel\Users\EloquentUser
         'permissions'
     ];
 
+    public static $rules_register = array(
+        'email' => 'required|unique:users',
+        'password' => 'required|confirmed',
+        'confirm_password' => 'confirmed'
+    ); 
+
     public static $rules = array(
         'email' => 'required',
         'password' => 'required|confirmed',
@@ -34,7 +40,7 @@ class User extends \Cartalyst\Sentinel\Users\EloquentUser
 
     public static $rulesUpdateUser = array(
         'email' => 'required',
-        'password' => 'confirmed',
+        'password' => 'required|confirmed',
         'new_password' => 'confirmed',
         'role' => 'required'
     ); 

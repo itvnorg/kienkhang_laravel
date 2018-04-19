@@ -70,14 +70,14 @@ desired effect
 <div class="wrapper">
 
   <!-- Main Header -->
-  @include('admin.includes.header')
+  @include('user.includes.header')
   <!-- Left side column. contains the logo and sidebar -->
-  @include('admin.includes.sidebar')
+  @include('user.includes.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    @include('admin/includes.content_header')
+    @include('user/includes.content_header')
 
     <!-- Main content -->
     <section class="content container-fluid">
@@ -100,10 +100,10 @@ desired effect
   </div>
 
   <!-- Main Footer -->
-  @include('admin.includes.footer')
+  @include('user.includes.footer')
 
   <!-- Control Sidebar -->
-  @include('admin.includes.control_sidebar')
+  @include('user.includes.control_sidebar')
   
 </div>
 <!-- ./wrapper -->

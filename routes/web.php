@@ -42,6 +42,16 @@ Route::group(['prefix' => '/auth'], function(){
 		'as' => 'logout', 
 		'uses' => 'Auth\LoginController@logout'
 	));
+
+	Route::get('/register', array(
+		'as' => 'register.view', 
+		'uses' => 'Auth\RegisterController@getRegisterView'
+	));
+
+	Route::post('/register', array(
+		'as' => 'register.submit', 
+		'uses' => 'Auth\RegisterController@register'
+	));
 });
 
 Route::group(['prefix' => '/password'], function(){
@@ -114,6 +124,52 @@ Route::group(['prefix' => ''], function () {
 
 });
 // 		-------=== END: Portal routes ===-------
+
+// 		-------=== BEGIN: User routes ===-------
+Route::group(['prefix' => 'user'], function () {
+
+	// 		-------=== BEGIN: User Home routes ===-------
+	Route::get('/', array(
+		'as' => 'user.home', 
+		function(){
+			return redirect()->route('user.profile.edit');
+		}
+	));
+	// 		-------=== END: User Home routes ===-------
+
+	// 		-------=== BEGIN: User Profile routes ===-------
+	Route::get('/update_profile', array(
+		'as' => 'user.profile.edit', 
+		'uses' => 'User\UserController@getUpdateProfile'
+	));
+
+	Route::put('/update_profile', array(
+		'as' => 'user.profile.update', 
+		'uses' => 'User\UserController@updateProfile'
+	));
+	// 		-------=== END: User Profile routes ===-------
+
+	// 		-------=== BEGIN: User Products routes ===-------
+	Route::resource('products', 'User\ProductController', ['names' => [
+		'index' => 'user.products.index',
+		'create' => 'user.products.create',
+		'store' => 'user.products.store',
+		'show' => 'user.products.show',
+		'edit' => 'user.products.edit',
+		'update' => 'user.products.update',
+		'destroy' => 'user.products.destroy'
+	]]);
+
+	Route::group(['prefix' => 'BEGIN'], function (){
+		Route::post('/delete', array(
+			'as' => 'user.products.delete', 
+			'uses' => 'User\ProductController@delete'
+		));
+	});
+	// 		-------=== END: User Products routes ===-------
+
+});
+// 		-------=== END: User routes ===-------
 
 // 		-------=== BEGIN: Admin routes ===-------
 Route::group(['prefix' => 'admin'], function () {

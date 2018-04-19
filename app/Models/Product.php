@@ -85,10 +85,13 @@ class Product extends Model
      *
      * @var array
      */
-    public function getList($input){
+    public function getList($input, $user = null){
         $list = $this->select('*');
         if(isset($input['searchString'])){
             $list->where('name', 'like', '%'.$input['searchString'].'%');
+        }
+        if($user != null){
+            $list->where('created_by', $user->id);
         }
         $list->offset($input['offset'])->limit($input['limit'])->orderBy('index', 'asc');
 
@@ -101,10 +104,13 @@ class Product extends Model
      *
      * @var array
      */
-    public function countTotal($input){
+    public function countTotal($input, $user = null){
         $total = $this->select('id');
         if(isset($input['searchString'])){
             $total->where('name', 'like', '%'.$input['searchString'].'%');
+        }
+        if($user != null){
+            $total->where('created_by', $user->id);
         }
 
         $total = $total->count();

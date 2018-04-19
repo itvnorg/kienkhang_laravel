@@ -14,6 +14,7 @@ return [
 	'configuration' => 'Cài đặt',
 	'content'	=> 'Nội dung',
 
+	'dear'	=>	'Chào bạn',
 	'delete'	=>	'Xóa',
 	'delete?'	=>	'Bạn có chắc muốn xóa dòng này ?',
 	'deletes?'	=>	'Bạn có chắc muốn xóa các dòng này ?',
@@ -51,6 +52,12 @@ return [
 	'msgErrModelNotExists' => 'Xin lỗi, :resource này không tồn tại.',
 	'msgSuccessUpdate' => 'Cập nhật :resource thành công.',
 	'msgSuccessDestroy' => 'Xóa :resource với id = :id thành công.',
+	'msgErrSendResetPasswordMail'	=>	'Có lỗi xảy ra trong quá trình gửi mail tìm lại mật khẩu',
+	'msgSuccessSendResetPasswordMail'	=>	'Gửi mail tìm lại mật khẩu thành công, bạn hay kiểm tra email của mình để tiếp tục',
+	'msgSuccessUpdatePassword' => 'Mật khẩu của bạn đã được cập nhật thành công, bây giờ bạn có thể đăng nhập bằng mật khẩu mới',
+	'msgErrUpdatePassword'	=>	'Xảy ra lỗi trong quá trình cập nhật mật khẩu mới, xin hãy tìm lại mật khẩu lần nữa',
+	'msgMainInResetPassEmail'	=>	'Chúng tôi vừa nhận được yêu cầu cấp lại mật khẩu từ email của bạn. Nếu đây đúng là yêu cầu của bạn, hãy nhấp vào liên kết phía dưới để tiếp tục tìm lại mật khẩu của bạn',
+	'msgApologizeInResetPassEmail'	=>	'Chúng tôi xin lỗi về sự bất tiện này nếu đây không phải là yêu cầu của bạn',
 
 	'name'	=>	'Tên',
 	'news' => 'Tin tức',
@@ -99,9 +106,11 @@ return [
 	'system' => 'Hệ thống',
 
 	'title' => 'Tên',
+	'titleMailResetPassword' => 'Tìm lại mật khẩu trên website ',
 	'type'	=>	'Loại',
 
 	'update' => 'Cập nhật :name',
+	'update_password' => 'Cập nhật mật khẩu',
 	'user'	=>	'Người dùng',
 	'users'	=>	'Người dùng',
 
